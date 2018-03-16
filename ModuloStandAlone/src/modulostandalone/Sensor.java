@@ -44,4 +44,11 @@ public class Sensor {
     {
         // se emvia señal de control al sensor.    
     }
+
+    /**
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
 }

@@ -7,6 +7,7 @@ package modulostandalone;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JComboBox;
 
 
 /**
@@ -37,4 +38,23 @@ public class AdministradorSensores {
         
     }
     
+    public List<String> ListaNombreSensores()
+    {
+        List<String> listaNombreSensores = new ArrayList<String>();
+        for(Sensor sensor: listaSensores)
+        {
+            listaNombreSensores.add(sensor.getNombre());
+        }
+        
+        return listaNombreSensores;
+    }
+
+    void LlenarComboBox(JComboBox<String> comboBoxListaSensores) {
+        
+        List<String> listaNombreSensores = ListaNombreSensores();
+        for(String nombreSensor:listaNombreSensores)
+        {
+            comboBoxListaSensores.addItem(nombreSensor);
+        }
+    }
 }
